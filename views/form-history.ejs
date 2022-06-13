@@ -1,0 +1,68 @@
+<%- include('includes/head', {cssFile, pageTitle}) %> 
+  <body>
+    <%- include('includes/dashboard-nav') %> 
+          <h1 class="h2">History</h1>
+          <form
+            action="/histories<% if(editMode) { %>/<%= data.id %>?_method=PUT<% } %>"
+            method="post"
+            class="pt-2"
+          >
+            <div class="form-floating mb-3">
+              <select name="userId" id="floatingUsername" class="form-control">
+                <% users.forEach(user => { %>
+                <option 
+                  value="<%= user.id %>"
+                  <% if (editMode && user.id === data.userId) { %>selected<% } %>
+                >
+                  <%= user.username %>
+                </option>
+                <% }) %> 
+              </select>
+              <label for="floatingBirthDate">Username</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="floatingStart"
+                placeholder="Game Start"
+                name="start"
+                <% if (editMode) { %>
+                value="<%= data.start %>"
+                <% } %>
+              />
+              <label for="floatingStart">Game Start</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="floatingEnd"
+                placeholder="Game End"
+                name="end"
+                <% if (editMode) { %>
+                value="<%= data.end %>"
+                <% } %>
+              />
+              <label for="floatingEnd">Game End</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingScore"
+                placeholder="Score"
+                name="score"
+                <% if (editMode) { %>
+                value="<%= data.score %>"
+                <% } %>
+              />
+              <label for="floatingScore">Score</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </main>
+      </div>
+    </div>
+
+    <%- include('includes/tail') %> 

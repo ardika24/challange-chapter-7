@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+:root {
+  --bg-main-color: #9c835f;
+  --text-warning-color: #f9b23d;
+  --text-dark-color: #000000;
+  --text-red-color: #bd0000;
+  --font-main: "Open Sans", sans-serif;
+}
+
+body {
+  background: var(--bg-main-color);
+  box-sizing: border-box;
+  min-width: 100%;
+  font-family: var(--font-main);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  padding: 1.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav #back {
+  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 0.1em;
+  color: var(--bg-main-color);
+  line-height: 0.6;
+}
+
+nav #back:hover {
+  color: grey;
+}
+
+nav #title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: var(--text-warning-color);
+}
+
+nav #logo-container {
+  margin: 0 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  nav {
+    padding: 0.7rem 1rem;
+  }
+  nav #back-container {
+    width: 50%;
+    display: flex;
+  }
+  nav #logo-container {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+  }
+  nav #title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #indicator {
+    margin: 1rem 0 !important;
+  }
+  .tangan {
+    margin-top: 0.5rem !important;
+  }
+  #player-win,
+  #com-win,
+  #draw {
+    padding: 1rem 1.5rem !important;
+  }
+  #restart {
+    width: 35% !important;
+  }
+}
+
+#indicator {
+  margin: 0 8rem;
+}
+
+@keyframes zoominoutsinglefeatured {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(2, 2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes zoominoutsinglefeatured2 {
+  0% {
+    transform: scale(1, 1) rotate(-28.87deg);
+  }
+  50% {
+    transform: scale(2, 2);
+  }
+  100% {
+    transform: scale(1, 1) rotate(-28.87deg);
+  }
+}
+
+#vs {
+  font-weight: bold;
+  font-size: 11rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #bd0000;
+
+  animation: zoominoutsinglefeatured 3s;
+}
+
+.player-name {
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+}
+
+#restart {
+  width: 20%;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+#restart:hover {
+  cursor: pointer;
+  background: #c4c4c4;
+  border-radius: 50%;
+
+  transition: transdorm 2s;
+  transform: rotate(360deg);
+}
+
+#player-win,
+#com-win,
+#draw {
+  background: #4c9654;
+  border-radius: 20px;
+  transform: rotate(-28.87deg);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffff;
+  padding: 2.5rem 4rem;
+  animation: zoominoutsinglefeatured2 2s;
+}
+
+.tangan {
+  padding: 2rem;
+}
+
+#player .tangan:hover {
+  cursor: pointer;
+
+  animation: shake 0.5s;
+
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  70% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}

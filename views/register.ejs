@@ -1,0 +1,55 @@
+<%- include('includes/head', {cssFile, pageTitle}) %>
+<body>
+  <section>
+    <div class="vh-100 gradient-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card-body px-5 py-4 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
+              <p class="text-white-50 mb-5">
+                Please enter your account details
+              </p>
+              <form action="/auth/register" method="POST">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    id="username"
+                    placeholder="Username"
+                  />
+                  <label for="username" class="text-dark">Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="password"
+                  />
+                  <label for="password" class="text-dark">Password</label>
+                </div>
+                <div class="form-floating mb-5">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="full_name"
+                    id="full_name"
+                    placeholder="Full Name"
+                  />
+                  <label for="full_name" class="text-dark">Full Name</label>
+                </div>
+                <button class="btn btn-outline-light btn-lg px-5" type="submit">
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%- include('includes/tail') %>
+</body>

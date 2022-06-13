@@ -1,0 +1,46 @@
+<%- include('includes/head', {cssFile, pageTitle}) %>
+<body>
+    <%- include('includes/dashboard-nav') %>
+    <div class="d-flex justify-content-between">
+        <h1 class=""><%= resourceName %></h1>
+        <a href="/bios/add" class="btn btn-lg btn-primary">Add Bio</a>
+    </div>
+    <div class="teble-responsive">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Birthdate</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% arr.forEach(el => { %> 
+                <tr>
+                    <td><%= el.user_game.username %></td>
+                    <td><%= el.fullname %></td>
+                    <td><%= el.birthdate %></td>
+                    <td><%= el.address %></td>
+                    <td>
+                        <a 
+                        href="/bios/<%= el.id %>/edit"
+                        class="btn btn-warning"
+                        >Edit</a>
+                        <form 
+                        method="POST"
+                        action="/bios/<%= el.id %>?_method=DELETE" 
+                        class="d-inline"
+                        >
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</main>
+</div>
+</div>
+<%- include('includes/tail') %>

@@ -1,0 +1,68 @@
+
+@media only screen and (max-width: 576px) {
+    .menu {
+        background-size: 100% 100%;
+    }
+
+    .mainText h1 {
+        font-size: 1.5em;
+    }
+
+    .mainText p {
+        font-size: 0.7em;
+    }
+
+    .mainButton {
+        left: 30%;
+    }
+
+    .mainButton button {
+        width: 150px;
+        height: 30px;
+        
+    }
+
+    
+    .mainButton button a {
+        font-size: 0.5em;
+    }
+
+    .aboutText {
+        margin-top: -125px;
+        margin-right: 10px;
+    }
+
+    .aboutText h3{
+        font-size: 0.5em;
+        letter-spacing: 1px;
+        line-height: 10px;
+    }
+    .aboutText h1{
+        font-size: 1em;
+        line-height: 15px;
+        letter-spacing: 2px;
+    }
+
+    .carousel-item img{
+        width: 300px;
+        height: 150px;
+    }
+
+    .featureMain {
+        margin-left: 75px;
+        padding-left: 75px;
+    }
+
+    .featureText h3 {
+        font-size: 1em;
+    }
+    .featureText h1 {
+        font-size: 1em;
+    }
+    .row span {
+        font-size: 1em;
+    }
+    .noteText p {
+        font-size: 1em;
+    }
+}

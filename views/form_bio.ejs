@@ -1,0 +1,72 @@
+<%- include('includes/head', {cssFile, pageTitle}) %>
+<body>
+    <%- include('includes/dashboard-nav') %>
+    <h1 class="">Bio Details</h1>
+    <% if (!editMode || (editMode && data )) { %>
+    <form 
+    action="/bios<% if(editMode) { %>/<%= data.id %>?_methode=PUT<% } %>"
+    method="POST"
+    class="pt-2">
+        <div class="form-floating mb-3">
+            <select name="userId" id="floatingUsername" class="form-control">
+                <% users.forEach(user => { %>
+                <option 
+                value="<%= user.id %>"
+                <% if(editMode && user.id === data.userId ) { %>selected<% } %>    
+                >
+                <%= user.username %>    
+                </option>
+                <% }) %>
+            </select>
+            <label for="floatingUsername">username</label>
+        </div>
+            <div class="form-floating mb-3">
+                <input 
+                type="text"
+                class="form-control"
+                id="floatingFullname"
+                placeholder="Fullname"
+                name="fullname"
+                <% if (editMode) { %> 
+                value="<% data.fullname %>" 
+                <% } %> 
+                >
+                <label for="floatingFullname">Fullname</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input 
+                type="text"
+                class="form-control"
+                id="floatingBirthdate"
+                placeholder="Birthdate"
+                name="birthdate"
+                <% if (editMode) { %> 
+                    value="<% data.birthdate %>" 
+                    <% } %> 
+                >
+                <label for="floatingBirthDate">Birthdate</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input 
+                type="text" 
+                name="address" 
+                id="floatingAddress"
+                placeholder="Address"
+                class="form-control"
+                <% if (editMode) { %> 
+                    value="<%= data.address %>" 
+                    <% } %> 
+                >
+                <label for="floatingAddress">Address</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+    <% } else { %>
+        <div class="alert alert-secondary" role="alert">
+            Biodata not found
+        </div>
+        <% } %>
+    </main>
+</div>
+</div>
+<%- include('includes/tail') %>

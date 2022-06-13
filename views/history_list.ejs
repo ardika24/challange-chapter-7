@@ -1,0 +1,45 @@
+<%- include('includes/head', {cssFile, pageTitle}) %>
+<body>
+  <%- include('includes/dashboard-nav') %>
+  <div class="d-flex justify-content-between">
+    <h1><%= resourceName %></h1>
+    <a href="/histories/add" class="btn btn-lg btn-primary">Add History</a>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover table-stripped">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Game Start</th>
+          <th>Game End</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% arr.forEach(el => { %>
+        <tr>
+          <td><%= el.User_game.username %></td>
+          <td><%= el.start %></td>
+          <td><%= el.end %></td>
+          <td><%= el.score %></td>
+          <td>
+            <a href="/histories/<%= el.id %>/edit" class="btn btn-warning">
+              Edit</a
+            >
+            <form
+              method="POST"
+              action="/histories/<%= el.id %>?_method=DELETE"
+              class="d-inline"
+            >
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</main>
+</div>
+</div>
+<%- include('includes/tail') %>

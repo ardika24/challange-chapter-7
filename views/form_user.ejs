@@ -1,0 +1,54 @@
+<%- include('includes/head', {cssFile, pageTitle}) %>
+<body>
+    <%- include('includes/dashboard-nav') %>
+    <h1 class="">User Details</h1>
+    <form 
+        action="/users<% if(editMode) { %>/<%= data.id %>?_method=PUT<% } %>"
+        method="post" 
+        class="pt-2">
+        <div class="form-floating mb-3">
+            <input 
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Username"
+            name="username"
+            <% if (editMode) { %>
+             value="<%= data.username %>"
+            <% } %>
+            />
+            <label for="floatingImput">Username</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input 
+            type="password" 
+            name="password" 
+            id="floatingPassword"
+            class="form-control"
+            placeholder="Password"
+            <% if (editMode) { %> 
+                value="<%= data.password %>" 
+            <% } %>
+            >
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input 
+            type="text"
+            class="form-control"
+            id="floatingStatus"
+            placeholder="Status"
+            name="status"
+            <% if (editMode) { %> 
+                value="<%= data.status %>" 
+            <% } %>
+            >
+            <label for="floatingPassword">Status</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</main>
+</div>
+</div>
+
+<%- include('includes/tail') %>

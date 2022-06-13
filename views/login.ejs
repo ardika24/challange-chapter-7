@@ -1,0 +1,54 @@
+<%- include('includes/head', {cssFile, pageTitle}) %>
+<body>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-3 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem">
+                        <div class="card-body px-5 py-4 text-center">
+                            <div class="mb-md-5 mt-md-4 pb-5">
+                                <h2 class="fw-bold mb-2 text-uppercase">Sign in</h2>
+                                <p class="text-white-50 mb-5">
+                                    Please enter your username and password!
+                                </p>
+                                <form action="/auth/login" method="POST">
+                                    <div class="form-floating mb-3">
+                                        <input 
+                                        type="text"
+                                        class="form-control"
+                                        id="username" 
+                                        name="username" 
+                                        placeholder="username">
+                                        <label for="username" class="text-dark">Username</label>
+                                    </div>
+                                    <div class="form-floating mb-5">
+                                        <input 
+                                        type="password"
+                                        class="form-contol"
+                                        id="password"
+                                        name="password"
+                                        placeholder="password"
+                                        >
+                                        <label for="username" class="text-dark">Password</label>
+                                    </div>
+                                    <button 
+                                    class="btn btn-outline-light btn-lg px-5"
+                                    type="submit"
+                                    >
+                                    Login
+                                    </button>
+                                </form>
+                                <div class="mt-5">
+                                    <pa class="mb-0">
+                                        don't have an account?
+                                        <a href="register" class="text-white-50 fw-bold">Sign Up</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <%- include('includes/tail') %>

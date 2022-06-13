@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --bg-main-color: #f7f7f7;
+    --text-light-color: white;
+    --text-warning-color: #FFB548;
+    --font-main: 'Open Sans', sans-serif;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+.menu {
+    height: 960px;
+    background-image: url(/assets/main-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-mainScreen {
+ background-image: url(/assets/main-bg.jpg);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.mainText h1 {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 83px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--bg-main-color);
+}
+
+.mainText p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: var(--bg-main-color);
+    text-align: center;
+}
+
+.mainButton {
+    margin: 0;
+    position: absolute;
+    left: 40%;
+}
+
+.btn {
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    border-radius: 4px;
+    width: 260px;
+    height: 60px;
+
+}
+
+.mainbutton a {
+    font-family: var(--font-main);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    line-height: 22px;
+    color: #1A1917;
+}
+
+#scroll-down p {
+    font-family: var(--font-main);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: var(--bg-main-color);
+}
+
+#scroll-down i {
+    color: var(--bg-main-color);
+}
+
+.menu-about {
+    background-image: url(/assets/the-games-bg.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutText {
+    margin-top: -350px;
+    margin-right: 20px;
+}
+
+.aboutText h3{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: var(--bg-main-color);
+}
+
+.aboutText h1{
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bg-main-color);
+}
+
+.carousel-item img {
+    width: 800px;
+    height: 400px;
+}
+
+.menu-features {
+    background-image: url(/assets/features.jpg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.featureMain {
+    margin-left: 55%;
+}
+
+.featureText {
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+}
+
+.featureText h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: var(--bg-main-color);
+}
+
+.featureText h1 {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bg-main-color);
+}
+
+.bullet {
+    margin: 5px;
+    padding: 5px;
+}
+
+.bullet i {
+    color: var(--bg-main-color);
+}
+
+.roadmapText {
+    padding-bottom: 5px;
+
+}
+
+.row span {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--text-warning-color);
+}
+
+.noteText {
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.noteText p {
+    font-size: 18px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    line-height: 22px;
+    text-align: justify;
+    color: var(--bg-main-color);
+}
+
+.roadmapTextTwo {
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+}
+
+.menu-requirements {
+    background-image: url(/assets/requirements.png);
+}
+
+.contentFaq  {
+    padding-top: 75px;
+    margin-top: 75px;
+}
+
+.contentFaq p {
+    color: var(--bg-main-color);
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 16px;
+    letter-spacing: 2px;
+}
+
+.contentMainText {
+    margin-left: 65px;
+    padding-left: 65px;
+}
+
+.contentMain h1 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bg-main-color);
+}
+
+#req-table {
+    width: 573px;
+    margin-left: 60px;
+    padding-left: 60px;
+}
+
+#req-table i {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-warning-color);
+}
+
+#req-table p {
+    font-family: var(--font-main);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--bg-main-color);
+}
+
+.menu-quotes {
+    background-image: url(/assets/the-games-bg.jpg);
+}
+
+.row-quotes {
+    
+}
+
+.quotes-text h3 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bg-main-color);
+}
+
+.quotes-text button {
+    width: 260px;
+    height: 60px;
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+}
+
+.quotes-text p {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--bg-main-color);
+}
+
+.background-card {
+    background-color: #FFFFFF14;
+
+}
+
+.card {
+    width: 400px;
+    height: 190px;
+    border-radius: 10px;
+}
+
+.card-img-top {
+    width: 65px;
+    height: 65px;
+}
+
+.menu-newsLetter {
+    background-image: url(/assets/the-games-bg.jpg);
+    background: #080a0b;
+}
+
+#newsletter #trophy {
+    height: 695px;
+    background-image: radial-gradient(
+      45.43% 53.19% at 50% 50%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 46.15%,
+      #080a0b 99.74%
+    ),
+    url("../assets/trophy.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#newsletter p#question {
+    color: var(--bg-main-color);
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+#newsLetter #title h2 {
+    color: var(--bg-main-color);
+    font-weight: 24px;
+    letter-spacing: 2px;
+}
+
+#newsletter #news-text {
+    color: var(--bg-main-color);
+    font-size: 18px;
+}
+
+#newsletter #subscribe-form #input {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+#subscribe-form #input #placeholder {
+    font-size: 14px;
+    color: var(--bg-main-color);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+#subscribe-form #input #value {
+    font-size: 18px;
+    color: var(--text-warning-color);
+}
+
+#subscribe-form  a#subs-button {
+    background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+    border-radius: 4px;
+    padding: 13px 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1a1917;
+}
+
+footer {
+    background: #080a0b;
+}

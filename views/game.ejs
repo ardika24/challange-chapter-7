@@ -1,0 +1,123 @@
+<%- include('includes/head', {cssFile, pageTitle})  %> 
+  <body>
+    <nav>
+      <div class="container-fluid">
+        <div class="d-flex align-items-center flex-wrap">
+          <div id="back-container">
+            <a class="d-flex align-items-center" href="/">
+              <span id="back"><</span></a
+            >
+          </div>
+          <div id="logo-container">
+            <img src="assets/logo 1.png" alt="Logo" width="72" height="72" />
+          </div>
+          <div id="title-container">
+            <span id="title" class="text-uppercase">Rock Paper Scissors</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-5">
+      <div class="row justify-content-center gx-5">
+        <div id="player" class="col-12 col-xl-3">
+          <div class="row justify-content-center gy-4">
+            <div
+              class="col-12 align-items-center text-center text-uppercase player-name"
+            >
+              Player
+            </div>
+            <div
+              class="col-4 col-xl-12 d-flex align-items-center tangan"
+              data-hand="rock"
+            >
+              <img class="img-fluid" src="assets/batu.png" alt="batu" />
+            </div>
+            <div
+              class="col-4 col-xl-12 d-flex align-items-center tangan"
+              data-hand="paper"
+            >
+              <img class="img-fluid" src="assets/kertas.png" alt="kertas" />
+            </div>
+            <div
+              class="col-4 col-xl-12 d-flex align-items-center tangan"
+              data-hand="scissors"
+            >
+              <img class="img-fluid" src="assets/gunting.png" alt="gunting" />
+            </div>
+          </div>
+        </div>
+        <div
+          id="indicator"
+          class="col-12 col-xl-2 d-flex align-items-center justify-content-center"
+        >
+          <div class="row justify-content-center">
+            <div
+              class="col-12 text-uppercase d-flex justify-content-center d-none"
+            >
+              <div id="draw">Draw</div>
+            </div>
+            <div
+              class="col-12 text-uppercase d-flex justify-content-center d-none"
+            >
+              <div id="player-win">
+                Player <br />
+                Win
+              </div>
+            </div>
+            <div
+              id="vs"
+              class="col-12 d-flex justify-content-center text-uppercase"
+            >
+              VS
+            </div>
+            <div
+              class="col-12 text-uppercase d-flex justify-content-center d-none"
+            >
+              <div id="com-win">
+                Com <br />
+                Win
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="com" class="col-12 col-xl-3">
+          <div class="row justify-content-center gy-4">
+            <div
+              class="col-12 align-items-center text-center text-uppercase player-name"
+            >
+              Com
+            </div>
+            <div
+              class="col-4 col-xl-12 d-flex align-items-center tangan"
+              data-hand="rock"
+            >
+              <img class="img-fluid" src="assets/batu.png" alt="batu" />
+            </div>
+            <div
+              class="col-4 col-xl-12 d-flex align-items-center tangan"
+              data-hand="paper"
+            >
+              <img class="img-fluid" src="assets/kertas.png" alt="kertas" />
+            </div>
+            <div
+              class="col-4 col-xl-12 d-flex align-items-center tangan"
+              data-hand="scissors"
+            >
+              <img class="img-fluid" src="assets/gunting.png" alt="gunting" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <div id="restart">
+            <img class="img-fluid" src="assets/refresh.png" alt="restart" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/gameNew.js"></script>
+</html>
